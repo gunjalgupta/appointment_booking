@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book your appointment</title>
+    <link href="reservation.css" rel="StyleSheet" />
+    <script src="reservation.js"></script>
+    <script src="age.js"></script>
+    <script>
+        function clickCounter() {
+
+                if (localStorage.clickcount) {
+                    localStorage.clickcount = Number(localStorage.clickcount)+1;
+                } else {
+                    localStorage.clickcount = 1;
+                }
+                document.getElementById("result").innerHTML = "Your number of appointments for today " + localStorage.clickcount + ".";
+        }
+    </script>
+</head>
+<body>
+<div id="app">
+    <header>Book your appointment</header>
+    <h3>Add your details</h3>
+    <div id="main">
+        <div id="add-details">
+            <label for ="fullname">Full Name</label>
+            <input type="text" id="fullname" placeholder="Full name" required/>
+        </div>
+        <div style="margin-top:25px;">
+            <label for="birthdate"> Birthdate</label>
+            <input type="date" id="birthdate" placeholder="Birthdate"/>
+        </div>
+        <div style="margin-top:25px;">
+            <label for="email"> Email</label>
+            <input type="email" id="email" placeholder="Email"/>
+        </div>
+        <p>Enter the symtoms you are experiencing.</p>
+        <div style="margin-top:25px;">
+            <label for="sym1"> Symptom </label>
+            <input type="text" id="sym1" placeholder="Symptom" required/>
+        </div>
+        <div>
+            <label for="sym2"> Symptom </label>
+            <input type="text" id="sym2" placeholder="Symptom" required/>
+        </div>
+        <div>
+            <label for="sym3"> Symptom </label>
+            <input type="text" id="sym3" placeholder="Symptom" required/>
+        </div>
+        <div>
+            <label for="sym4"> Symptom </label>
+            <input type="text" id="sym4" placeholder="Symptom" required/>
+        </div>
+        <div style="margin-top:25px;">
+            <label for="recurring">Recurring Customer:</label>
+            <select name="Recurring customer" id="recurring">
+            <option value="first">First-time</option>
+            <option value="recur">Recurring</option>
+            </select>
+        </div>
+        <div style="margin-top:25px;">
+            <label for="date"> Booking date</label>
+            <input type="date" id="date" placeholder="Booking date" required/>
+        </div>
+        <div style="margin-top:25px;">
+            <label for="time"> Scheduled time</label>
+            <input type="time" id="time" title="choose a time" placeholder="Choose a time" required/>
+        </div>
+
+        <ul id="task-list">
+        </ul>
+        <p><button onclick="myFunction()" type="button">Confirm Booking</button></p>
+        <p><button onclick="clickCounter()" type="button">Total Bookings</button></p>
+        <p><button onclick="bookinginfo()" type="button">Booking Information</button></p>
+        <p><button onclick="getLocation()" type="button" id="location">Get Location</button></p>
+    </div>
+    <div id="result"></div>
+    <footer>
+
+    </footer>
+</div>
+
+</body>
+</html>
