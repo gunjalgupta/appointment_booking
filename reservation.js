@@ -172,5 +172,5 @@ const successful = async (position) => {
     let response = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=bdcde0d9ad2b471188fe440c59b542f3`)
     let data = await response.json();
     console.log(data);
-    document.getElementById("result").innerHTML = data.results[0].formatted;
+    document.getElementById("location").innerHTML = data.results[0].formatted;
 };

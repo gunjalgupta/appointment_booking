@@ -17,5 +17,5 @@ say.apply(employee2, ['Hello']); // Hello Kelly King
 var sayHelloJon = say.bind(employee1);
 var sayHelloKelly = say.bind(employee2);
 
-sayHelloJon(); // Hello Jon Kuperman
-sayHelloKelly(); // Hello Kelly King
+sayHelloJon("hello"); // Hello Jon Kuperman
+sayHelloKelly("hello"); // Hello Kelly King
