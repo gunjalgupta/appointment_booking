@@ -151,19 +151,6 @@ const bookinginfo = () => {
 
 }
 
-// const getLocation=()=> {
-//     if (navigator.geolocation) {
-//       navigator.geolocation.getCurrentPosition(showPosition);
-//     } else {
-//       alert("Geolocation is not supported by this browser.");
-//     }
-//   }
-//   function showPosition(position) {
-//     var lat = position.coords.latitude;
-//     var lng = position.coords.longitude;
-//     document.getElementById("result").innerHTML = "Latitude: " + position.coords.latitude +
-//     "<br>Longitude: " + position.coords.longitude;
-// }
 function getLocation() {
     navigator.geolocation.getCurrentPosition(successful, console.log);  
 }
