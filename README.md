@@ -1,6 +1,5 @@
 # Appointment booking
 ## Generic system which can be used to book appointments
-
 ##Javascripts topics covered
 
 
