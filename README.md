@@ -1,9 +1,9 @@
 # Appointment booking
 ## Generic system which can be used to book appointments
-##Javascripts topics covered
+## Javascripts topics covered
 
 
-###Arrow functions
+### Arrow functions
 •	While an arrow function expression is a more compact alternative to a regular function expression, it has limitations and cannot be utilized in all cases.
 •	Some limitations include the inability to utilize call, apply, and bind methods as constructors, as they require on defining a scope.
 •	In ES6, the arrow functions were introduced.
@@ -14,7 +14,7 @@
 •	}
 •	
  
-###Split function
+### Split function
 The split() method splits a String into an ordered list of substrings, places them in an array, and returns the array. The division is carried out by looking for a pattern, which is passed in as the method's first parameter.
 
 includes function
@@ -33,7 +33,7 @@ var firstname,lastname;
     }
 
 
-###Slice function
+### Slice function
 The slice() function creates a new array object with a shallow copy of a piece of an array from start to end (end not included), where start and end denote the index of elements in that array. There will be no changes to the original array.
 console.log("\nThe two major symptoms the patient facing are:"+imp1+"  and "+imp2);
 
@@ -70,7 +70,7 @@ let data = [];
 
 
 
-###Destructuring object and array
+### Destructuring object and array
 The destructuring assignment syntax is a JavaScript expression that allows you to extract values from arrays or properties from objects and store them in separate variables. The object and array literal expressions make it simple to construct ad hoc data packages. Destructuring can be used to assign a value to a variable that isn't part of the variable's declaration.
 let obj = {name: fname, email: email, birthdate: birth};
     let {name: fullname, email:mailid}= obj;   //Use of OBJECT DESTRUCTURING
@@ -79,7 +79,7 @@ let obj = {name: fname, email: email, birthdate: birth};
     let [imp1,imp2,,]=syms;    //Use of ARRAY DESTRUCTURING
     console.log("\nThe two major symptoms the patient facing are:"+imp1+"  and "+imp2);
 
-###Spread and rest operator
+### Spread and rest operator
 Spread syntax (...) allows an iterable, such as an array expression or string, to be extended when zero or more parameters (for function calls) or elements (for array literals) are anticipated, or an object expression to be expanded where zero or more key-value pairs (for object literals) are requested.
 
 The rest parameter syntax enables a function to receive an endless number of arguments as an array, allowing for the representation of variadic functions in JavaScript.
@@ -112,7 +112,7 @@ static getCost = (...syms) =>{    // USE OF REST OPERATOR
         return syms.length*150;
     }
 
-###Closures
+### Closures
 A closure is a function that has been packaged (contained) with references to its surrounding state (the lexical environment). In other words, a closure allows you to access the scope of an outside function from an inside function. Closures are produced in JavaScript every time a function is created, during function creation time.
 
 1.	function age(birth) {
@@ -128,7 +128,7 @@ A closure is a function that has been packaged (contained) with references to it
 11.	exports =age()
 
 
-	###Require and exports
+### Require and exports
 	When building JavaScript modules, the export statement is used to export live bindings to functions, objects, or primitive values from the module so that they may be utilized by other applications with the require statement. An imported binding's value is susceptible to change in the module that exports it. When a module changes the value of a binding that it exports, the change is reflected in the imported value.
 
 12.	function age(birth) {
@@ -146,7 +146,7 @@ A closure is a function that has been packaged (contained) with references to it
 const age= require('./age.js');
 
 
-###Class static method
+### Class static method
 A static method or attribute for a class is defined using the static keyword. On instances of the class, neither static methods nor static properties may be invoked. Instead, they are summoned by the class itself.
 
 Static methods are frequently utility functions, such as those used to create or clone objects, whereas static properties are helpful for caches, fixed-configuration data, or any other data that does not need to be copied between instances.
@@ -155,7 +155,7 @@ static getCost = (...syms) =>{    // USE OF CLASS STATIC METHOD
         return syms.length*150;
     }
 
-###Regular Expression
+### Regular Expression
 Regular expressions are patterns that are used to match characters in strings. Regular expressions are also objects in JavaScript. These patterns are utilized with RegExp's exec() and test() methods, as well as String's match(), matchAll(), replace(), replaceAll(), search(), and split() methods.
 
 var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;   // Use of REGULAR EXPRESSION
@@ -164,17 +164,17 @@ var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;   // Use o
    } ;
 
 
-###Default arguments
+### Default arguments
 If no value or undefined is supplied, default function parameters allow named parameters to be populated with default values. In JavaScript, function arguments are undefined by default. It is, however, frequently useful to provide a different default value. This is when the default settings come in handy.
 
 static getCost(n=1) {     // Use of DEFAULT ARGUMENTS 
         return n*120;
     }
 
-###Inheritance in classes
+### Inheritance in classes
 Class inheritance allows one class to extend another. In JavaScript, inheritance is allowed through the use of a prototype object refered as "Prototypal Inheritance." In JavaScript, there is just one inheritance construct: objects. Each object has a private property that contains a reference to another object known as its prototype. That prototype object has its own prototype, and so on until an object with null as its prototype is reached.
 
-###Method overriding
+### Method overriding
 Method overriding is an OOPs concept that is closely related to inheritance. Method overriding occurs when a child class method overrides a parent class method with the same name, parameters, and return type.
 
 // Use of CLASSES with INHERITANCE and METHOD OVERRIDING
@@ -202,7 +202,7 @@ let fee
         console.log("\nVisiting fees for recurring visits: "+fee);
     }
 
-###Object.assign
+### Object.assign
 Object.assign() transfers all enumerable own properties from one or more source objects to a destination object. It returns the target object as it has been changed.
 
 let obj = {name: fname, email: email, birthdate: birth};
@@ -210,7 +210,7 @@ let src = {date: date, time:time};
     Object.assign(obj,src); // Use of OBJECT.ASSIGN
 
 
-###Fetch() for external API call
+### Fetch() for external API call
 The Fetch API exposes a JavaScript interface for accessing and altering HTTP pipeline components such as requests and replies. It also has a global fetch() function for retrieving resources asynchronously via the network in an easy and logical manner. 
 
 // Use of external API call to find users of the app.  
@@ -231,7 +231,7 @@ fetch(URL)
     });
 
 
-###Call apply bind
+### Call apply bind
 The call() method calls a function with a given 'this' value and one-by-one parameters. Apply( ): Invokes the function and allows you to pass arguments as an array. Bind() returns a new function that accepts an array and any number of parameters.
 
 //Call
@@ -259,7 +259,7 @@ sayHelloJon("Hello"); // Hello Jon Kuperman
 sayHelloKelly("Hello"); // Hello Kelly King
 
 
-###Var Let and Const
+### Var Let and Const
 •	var variables can be renamed and changed. The let function can be changed but not re-declared. Const cannot be changed or redefined. 
 •	Var declarations are globally or function scoped, whereas let and const declarations are block scoped.
 •	They are all hoisted to the top of their scope. However, although var variables are initialized with undefined, let and const variables are not. 
@@ -285,7 +285,7 @@ const greetings = "say Hi";
     console.log(greetings);
 
 
-###Callbacks
+### Callbacks
 A function that is given to another function is referred to as a callback. When the first function is completed, the second function is executed. The issue with callbacks is that they cause something known as "Callback Hell." When you start layering functions within functions within functions, it becomes quite difficult to comprehend the code.
 
 //Using Callbacks
@@ -310,7 +310,7 @@ function concatString(previous, current, callback){
   }
   concatAll()
 
-###Promise
+### Promise
 You encapsulate the whole function in a Promise and use resolve instead of the callback (or reject if there is an error). This Promise object is returned by the function. This is called a Promise Chain.
 
 // Using promise
@@ -334,7 +334,7 @@ You encapsulate the whole function in a Promise and use resolve instead of the c
   }
   concatAll()
 
-###Async-await
+### Async-await
 Await serves as syntactic sugar for Promises. It transforms your asynchronous code into synchronous/procedural code, making it easier for people to understand. In an async function, the await keyword ensures that all promises delivered by the async function are synchronized, i.e. they wait for each other. Await eliminates the need for callbacks in.then() and.catch() expressions ().
 
 //Using async await
@@ -357,9 +357,9 @@ async function concatAll(){
   concatAll()
  
 
-##HTML5:
+## HTML5:
 
-###SessionStrorage
+### SessionStrorage
 The read-only sessionStorage attribute gets access to the current origin's session Storage object. The distinction between sessionStorage and localStorage is that data in localStorage does not expire, but data in sessionStorage is erased when the page session expires.
 
 LocalStorage is similar to sessionStorage in that it has no expiration date, but sessionStorage data is removed when the page session expires — that is, when the page is closed. (When the last "private" tab is closed, localStorage data for a page loaded in a "private browsing" or "incognito" session is deleted.)
@@ -376,7 +376,7 @@ let data = [];
      sessionStorage.setItem('data', JSON.stringify(data)); // Use of JSON.STRINGFY
 
  
-###LocalStorage
+### LocalStorage
 The window interface's localStorage read-only feature allows you to access a Storage object for the Document's origin; the stored data is preserved throughout browser sessions.
 <script>
         function clickCounter() {
@@ -391,7 +391,7 @@ The window interface's localStorage read-only feature allows you to access a Sto
     </script>
 
 
-###Geolocation
+### Geolocation
 If the user desires, the Geolocation API allows them to give their location to web apps. The user is requested for permission to report location information for privacy concerns.
 
 function getLocation() {
